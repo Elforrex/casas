@@ -1,0 +1,100 @@
+    :root {
+      /* traido desde astro */
+      --accent: 15, 105, 56;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        #99c54a 30%,
+        white 60%
+      );
+      /* colores sacado del logo */
+      --fondo: rgb(14, 14, 14);
+      --fondo2: rgb(230, 230, 230);
+      --logo1: rgb(217, 225, 39);
+      --logo2: rgb(18, 154, 72);
+      --logo3: rgb(17, 103, 53);
+      --logo4: rgb(146, 193, 62);
+      --logo-i: rgb(18, 154, 72);
+      --logo-g: rgb(35, 31, 32);
+      --logo-r: rgb(217, 225, 39);
+      --logo-o: rgb(146, 193, 62);
+      --logo-u: rgb(15, 147, 71);
+      --logo-p: rgb(15, 105, 56);
+    }
+    body {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      /* display: flex; */
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      font-family: "Hind Siliguri", sans-serif;
+    }
+    .property-container {
+      display: grid; /* Establece el contenedor como una cuadrícula */
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(350px, 1fr)
+      ); /* Define las columnas de la cuadrícula */
+      grid-gap: 20px; /* Establece el espacio entre los elementos de la cuadrícula */
+    }
+
+    .property-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding-top: 0.25rem;
+      padding-right: 0.45rem;
+      padding-bottom: 0.25rem;
+      padding-left: 0.45rem;
+      background-color: white;
+      background-size: 400%;
+      border-radius: 0.6rem;
+      background-position: 100%;
+      transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -2px rgba(0, 0, 0, 0.1);
+
+    }
+    .property-card > a {
+      width: 100%;
+      text-decoration: none;
+      line-height: 1.4;
+      border-radius: 0.35rem;
+      color: #111;
+      background-color: white;
+      opacity: 0.8;
+    }
+    .property-card:is(:hover, :focus-within) {
+      background-position: 0;
+      background-image: var(--accent-gradient);
+    }
+    .property-card:is(:hover, :focus-within) h2 {
+      color: rgb(var(--accent));
+    }
+    .property-image {
+      width: 100%;
+      height: auto;
+      border-top-right-radius: 0.33rem;
+      border-top-left-radius: 0.33rem;
+    }
+    .property-title {
+      margin-left: 25px;
+      margin-top: 10px;
+      margin-bottom: -5px;
+    }
+    .property-description {
+      margin-left: 25px;
+      color: #3f403f;
+    }
+    .property-details {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 25px;
+    }
+    .icon {
+      width: 15px;
+      margin-right: 15px;
+    }

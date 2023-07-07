@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    text-align: right;
+    
+}
+header a {
+    text-decoration: none;
+}
+
+.fav {
+    margin: -5px 0 15px;
+    font-weight: 500;
+} 
+
+.main,
+.fav {
+    text-align: right;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.main a,
+.fav a {
+    margin-right: 20px;
+    color: black;
+
+}
+  
+.fav a {
+    color: rgba(0, 0, 0, 0.303);
+}
+  
+.main a {
+    font-weight: 900;
+}
+  
+hr {
+    width: 100%;
+    margin: 0 -20px 40px;
+    border: 2px solid var(--logo3);
+    margin-left: 1px;
+}
+  
